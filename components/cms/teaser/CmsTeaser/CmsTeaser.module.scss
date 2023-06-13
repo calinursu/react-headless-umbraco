@@ -1,0 +1,85 @@
+@import 'styles/main';
+
+.wrapper {
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  min-height: $teaser-min-height-mobile;
+  overflow: hidden;
+  padding: $spacing-l;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(large down) {
+    &:last-of-type {
+      margin-bottom: $spacing-l;
+    }
+  }
+
+  @include breakpoint(medium) {
+    min-height: $teaser-min-height;
+    padding: $spacing-m * 2;
+  }
+}
+
+.gradient {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.image {
+  position: absolute;
+}
+
+.infoContainer {
+  border-radius: $border-radius;
+  max-width: $teaser-info-container-max-width;
+  padding: $spacing-l;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding: $spacing-m * 2;
+  }
+}
+
+.header {
+  overflow-wrap: break-word;
+}
+
+.paragraph {
+  margin-top: $spacing-m;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  margin-top: $spacing-l;
+}
+
+.button {
+  margin-bottom: $spacing-m;
+  margin-right: 0;
+  padding-left: $spacing-m * 2;
+  padding-right: $spacing-m * 2;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(medium) {
+    margin-right: $spacing-m;
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.arrowButton {
+  width: 70px;
+}

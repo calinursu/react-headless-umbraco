@@ -1,0 +1,42 @@
+@import 'styles/utils/breakpoints';
+
+.headerWrapper {
+  > [class*='Heading'] {
+    margin-bottom: $spacing-xxs;
+  }
+
+  & *:last-child {
+    margin-bottom: $spacing-m;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+
+  & > div[class*='Teaser'] {
+    &:not(:last-child) {
+      margin-bottom: $spacing-l;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(large down) {
+    flex-direction: column;
+
+    & > * {
+      width: 100% !important;
+    }
+  }
+}
+
+.noMarginBottom {
+  margin-bottom: 0 !important;
+}
